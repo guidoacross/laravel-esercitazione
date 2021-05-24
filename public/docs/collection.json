@@ -1,0 +1,275 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "eba4e7b9-293a-4daf-a7a1-2a3a04b39a39",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Users",
+            "description": "\nManaging users",
+            "item": [
+                {
+                    "name": "Get Users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the users.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Users Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the users.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Gino\",\n            \"lastname\": \"Danieli\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 25,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 27,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 29,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 31,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 33,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 34,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 36,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 38,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 39,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 40,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 41,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 42,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 43,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-07\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 44,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-07\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 45,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-10-12\",\n            \"age\": 28,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 46,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-01-12\",\n            \"age\": 29,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 47,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-10-12\",\n            \"age\": 28,\n            \"types\": []\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Post User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"accusantium\",\n    \"lastname\": \"aut\",\n    \"date_of_birth\": \"2021-05-24T09:00:37+0000\",\n    \"types\": \"facere\"\n}"
+                        },
+                        "description": "Store the user in the database.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "officia",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retriew an user by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get User Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:user",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                                    "variable": [
+                                        {
+                                            "id": "user",
+                                            "key": "user",
+                                            "value": "officia",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Retriew an user by ID.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"No query results for model [App\\\\User] officia\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 224,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 200,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\app\\\\Exceptions\\\\Handler.php\",\n            \"line\": 49,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\nunomaduro\\\\collision\\\\src\\\\Adapters\\\\Laravel\\\\ExceptionHandler.php\",\n            \"line\": 68,\n            \"function\": \"render\",\n            \"class\": \"App\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"NunoMaduro\\\\Collision\\\\Adapters\\\\Laravel\\\\ExceptionHandler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 176,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 59,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 105,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 683,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 658,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 624,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 613,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 170,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 130,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\fruitcake\\\\laravel-cors\\\\src\\\\HandleCors.php\",\n            \"line\": 52,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\CheckForMaintenanceMode.php\",\n            \"line\": 63,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\CheckForMaintenanceMode\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\fideloper\\\\proxy\\\\src\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Fideloper\\\\Proxy\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 105,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 145,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 110,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 324,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 305,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 76,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 51,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 41,\n            \"function\": \"makeResponseCallIfEnabledAndNoSuccessResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 172,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 127,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 119,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 73,\n            \"function\": \"processRoutes\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 37,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 590,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 134,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 255,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1009,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 273,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 149,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Application.php\",\n            \"line\": 93,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 131,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Put User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "voluptas",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"quibusdam\",\n    \"lastname\": \"neque\",\n    \"date_of_birth\": \"2021-05-24T09:00:37+0000\",\n    \"types\": \"error\"\n}"
+                        },
+                        "description": "Update a user in the database by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "vitae",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Delete a user by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
