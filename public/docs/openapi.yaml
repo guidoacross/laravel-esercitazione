@@ -1,0 +1,214 @@
+openapi: 3.0.3
+info:
+    title: Laravel
+    description: ''
+    version: 1.0.0
+servers:
+    -
+        url: 'http://localhost'
+paths:
+    /api/users:
+        get:
+            summary: 'Get Users'
+            description: 'List all the users.'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                200:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    data: [{ id: 1, name: Gino, lastname: Danieli, date_of_birth: '1994-10-12', age: 26, types: [{ name: email }] }, { id: 3, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 4, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 5, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 6, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 7, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 8, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 9, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 10, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 11, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 12, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 13, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 14, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 15, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 16, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 17, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 18, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 19, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 20, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 21, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 22, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 23, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 24, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 25, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 26, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 27, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 28, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 29, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 30, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 31, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 32, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: email }] }, { id: 33, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: email }] }, { id: 34, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 35, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 36, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 37, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }] }, { id: 38, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 39, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 40, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }, { name: email }] }, { id: 41, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }, { name: email }] }, { id: 42, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }] }, { id: 43, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-07', age: 24, types: [{ name: sms }] }, { id: 44, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-07', age: 24, types: [{ name: sms }] }, { id: 45, name: Poster, lastname: Franceschi, date_of_birth: '1992-10-12', age: 28, types: [{ name: sms }] }, { id: 46, name: Poster, lastname: Franceschi, date_of_birth: '1992-01-12', age: 29, types: [{ name: sms }] }, { id: 47, name: Poster, lastname: Franceschi, date_of_birth: '1992-10-12', age: 28, types: [] }]
+                                properties:
+                                    data: { type: array, example: [{ id: 1, name: Gino, lastname: Danieli, date_of_birth: '1994-10-12', age: 26, types: [{ name: email }] }, { id: 3, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 4, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 5, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 6, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 7, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 8, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 9, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 10, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 11, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 12, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 13, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 14, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 15, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 16, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 17, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 18, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 19, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 20, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 21, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 22, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 23, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 24, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 25, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 26, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 27, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 28, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 29, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 30, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 31, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 32, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: email }] }, { id: 33, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: email }] }, { id: 34, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 35, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 36, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 37, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }] }, { id: 38, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [] }, { id: 39, name: Poster, lastname: Franceschi, date_of_birth: '1995-06-02', age: 25, types: [{ name: sms }, { name: email }] }, { id: 40, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }, { name: email }] }, { id: 41, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }, { name: email }] }, { id: 42, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-02', age: 24, types: [{ name: sms }] }, { id: 43, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-07', age: 24, types: [{ name: sms }] }, { id: 44, name: Poster, lastname: Franceschi, date_of_birth: '1996-06-07', age: 24, types: [{ name: sms }] }, { id: 45, name: Poster, lastname: Franceschi, date_of_birth: '1992-10-12', age: 28, types: [{ name: sms }] }, { id: 46, name: Poster, lastname: Franceschi, date_of_birth: '1992-01-12', age: 29, types: [{ name: sms }] }, { id: 47, name: Poster, lastname: Franceschi, date_of_birth: '1992-10-12', age: 28, types: [] }], items: { type: object } }
+            tags:
+                - Users
+            security: []
+        post:
+            summary: 'Post User'
+            description: 'Store the user in the database.'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Users
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: accusantium
+                                lastname:
+                                    type: string
+                                    description: ''
+                                    example: aut
+                                date_of_birth:
+                                    type: string
+                                    description: 'The value must be a valid date.'
+                                    example: '2021-05-24T09:00:37+0000'
+                                types:
+                                    type: string
+                                    description: ''
+                                    example: facere
+                            required:
+                                - name
+                                - lastname
+                                - date_of_birth
+                                - types
+            security: []
+    '/api/users/{user}':
+        get:
+            summary: 'Get User'
+            description: 'Retriew an user by ID.'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses:
+                404:
+                    description: ''
+                    content:
+                        application/json:
+                            schema:
+                                type: object
+                                example:
+                                    message: 'No query results for model [App\User] officia'
+                                    exception: Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+                                    file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php'
+                                    line: 224
+                                    trace: [{ file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php', line: 200, function: prepareException, class: Illuminate\Foundation\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\app\Exceptions\Handler.php', line: 49, function: render, class: Illuminate\Foundation\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php', line: 68, function: render, class: App\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php', line: 51, function: render, class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 176, function: handleException, class: Illuminate\Routing\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 105, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 683, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 658, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 624, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 613, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 170, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 130, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 105, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 145, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 110, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 590, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Command\Command.php', line: 255, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 1009, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 273, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 149, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 131, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }]
+                                properties:
+                                    message: { type: string, example: 'No query results for model [App\User] officia' }
+                                    exception: { type: string, example: Symfony\Component\HttpKernel\Exception\NotFoundHttpException }
+                                    file: { type: string, example: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php' }
+                                    line: { type: integer, example: 224 }
+                                    trace: { type: array, example: [{ file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions\Handler.php', line: 200, function: prepareException, class: Illuminate\Foundation\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\app\Exceptions\Handler.php', line: 49, function: render, class: Illuminate\Foundation\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\nunomaduro\collision\src\Adapters\Laravel\ExceptionHandler.php', line: 68, function: render, class: App\Exceptions\Handler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Pipeline.php', line: 51, function: render, class: NunoMaduro\Collision\Adapters\Laravel\ExceptionHandler, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 176, function: handleException, class: Illuminate\Routing\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Middleware\ThrottleRequests.php', line: 59, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Routing\Middleware\ThrottleRequests, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 105, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 683, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 658, function: runRouteWithinStack, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 624, function: runRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Routing\Router.php', line: 613, function: dispatchToRoute, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 170, function: dispatch, class: Illuminate\Routing\Router, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 130, function: 'Illuminate\Foundation\Http\{closure}', class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\fruitcake\laravel-cors\src\HandleCors.php', line: 52, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Fruitcake\Cors\HandleCors, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\TransformsRequest.php', line: 21, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\TransformsRequest, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\ValidatePostSize.php', line: 27, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\ValidatePostSize, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode.php', line: 63, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\fideloper\proxy\src\TrustProxies.php', line: 57, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 171, function: handle, class: Fideloper\Proxy\TrustProxies, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Pipeline\Pipeline.php', line: 105, function: 'Illuminate\Pipeline\{closure}', class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 145, function: then, class: Illuminate\Pipeline\Pipeline, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php', line: 110, function: sendRequestThroughRouter, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 324, function: handle, class: Illuminate\Foundation\Http\Kernel, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 305, function: callLaravelOrLumenRoute, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 76, function: makeApiCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 51, function: makeResponseCall, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Strategies\Responses\ResponseCalls.php', line: 41, function: makeResponseCallIfEnabledAndNoSuccessResponses, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 236, function: __invoke, class: Knuckles\Scribe\Extracting\Strategies\Responses\ResponseCalls, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 172, function: iterateThroughStrategies, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Extracting\Generator.php', line: 127, function: fetchResponses, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 119, function: processRoute, class: Knuckles\Scribe\Extracting\Generator, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\knuckleswtf\scribe\src\Commands\GenerateDocumentation.php', line: 73, function: processRoutes, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 36, function: handle, class: Knuckles\Scribe\Commands\GenerateDocumentation, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\Util.php', line: 37, function: 'Illuminate\Container\{closure}', class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 93, function: unwrapIfClosure, class: Illuminate\Container\Util, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php', line: 37, function: callBoundMethod, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Container\Container.php', line: 590, function: call, class: Illuminate\Container\BoundMethod, type: '::' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 134, function: call, class: Illuminate\Container\Container, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Command\Command.php', line: 255, function: execute, class: Illuminate\Console\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Command.php', line: 121, function: run, class: Symfony\Component\Console\Command\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 1009, function: run, class: Illuminate\Console\Command, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 273, function: doRunCommand, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\symfony\console\Application.php', line: 149, function: doRun, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Console\Application.php', line: 93, function: run, class: Symfony\Component\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php', line: 131, function: run, class: Illuminate\Console\Application, type: '->' }, { file: 'C:\laragon\www\laravel-esercitazione\artisan', line: 37, function: handle, class: Illuminate\Foundation\Console\Kernel, type: '->' }], items: { type: object } }
+            tags:
+                - Users
+            security: []
+        put:
+            summary: 'Put User'
+            description: 'Update a user in the database by ID.'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Users
+            requestBody:
+                required: true
+                content:
+                    application/json:
+                        schema:
+                            type: object
+                            properties:
+                                name:
+                                    type: string
+                                    description: ''
+                                    example: quibusdam
+                                lastname:
+                                    type: string
+                                    description: ''
+                                    example: neque
+                                date_of_birth:
+                                    type: string
+                                    description: 'The value must be a valid date.'
+                                    example: '2021-05-24T09:00:37+0000'
+                                types:
+                                    type: string
+                                    description: ''
+                                    example: error
+                            required:
+                                - name
+                                - lastname
+                                - date_of_birth
+                                - types
+            security: []
+        delete:
+            summary: 'Delete User'
+            description: 'Delete a user by ID.'
+            parameters:
+                -
+                    in: header
+                    name: Content-Type
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+                -
+                    in: header
+                    name: Accept
+                    description: ''
+                    example: application/json
+                    schema:
+                        type: string
+            responses: {  }
+            tags:
+                - Users
+            security: []
+        parameters:
+            -
+                in: path
+                name: user
+                description: ''
+                example: officia
+                required: true
+                schema:
+                    type: string
