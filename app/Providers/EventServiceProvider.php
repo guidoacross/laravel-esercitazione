@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Listeners\UserCreatedListener;
+use App\Events\UserCreated;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -14,9 +16,9 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Verification' => [
-            'App\Listeners\SendVerificationEmail',
-        ],
+        UserCreated::class => [
+            UserCreatedListener::class,
+        ]
     ];
 
     /**

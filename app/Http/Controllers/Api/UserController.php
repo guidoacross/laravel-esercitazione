@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\TypeResource;
+use App\Events\UserCreated;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
@@ -64,6 +65,7 @@ class UserController extends Controller
                 $typeId = Type::select('id')->where('name',$type)->get();
                 $user->types()->attach($typeId);
             }
+            event(new UserCreated($user));
             return new UserResource($user);
         } catch (Exception $e) {
             return $e->getMessage();

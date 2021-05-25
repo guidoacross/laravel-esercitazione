@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Events\UserCreated;
 
 class User extends Model
 {
@@ -15,6 +16,15 @@ class User extends Model
         'name', 'lastname', 'date_of_birth', 'age'
     ];
     public $timestamps = false;
+
+    /**
+     * Assigned Events.
+     *
+     */
+
+    protected $dispatchesEvents = [
+        'created'=> UserCreated::class
+    ];
 
     /**
      * The types that belong to the user.
