@@ -59,7 +59,741 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>Base URL</p>
 </blockquote>
 <pre><code class="language-yaml">http://localhost</code></pre><h1>Authenticating requests</h1>
-<p>This API is not authenticated.</p><h1>Users</h1>
+<p>This API is not authenticated.</p><h1>Endpoints</h1>
+<h2>api/user</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/user" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-user"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user"></code></pre>
+</div>
+<div id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user"></code></pre>
+</div>
+<form id="form-GETapi-user" data-method="GET" data-path="api/user" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-user" onclick="tryItOut('GETapi-user');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-user" onclick="cancelTryOut('GETapi-user');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-user" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/user</code></b>
+</p>
+</form>
+<h2>api/{fallbackPlaceholder}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/possimus" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/possimus"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Page Not Found. If error persists, contact ste.samu@across.it"
+}</code></pre>
+<div id="execution-results-GETapi--fallbackPlaceholder-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi--fallbackPlaceholder-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi--fallbackPlaceholder-"></code></pre>
+</div>
+<div id="execution-error-GETapi--fallbackPlaceholder-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi--fallbackPlaceholder-"></code></pre>
+</div>
+<form id="form-GETapi--fallbackPlaceholder-" data-method="GET" data-path="api/{fallbackPlaceholder}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi--fallbackPlaceholder-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi--fallbackPlaceholder-" onclick="tryItOut('GETapi--fallbackPlaceholder-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi--fallbackPlaceholder-" onclick="cancelTryOut('GETapi--fallbackPlaceholder-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi--fallbackPlaceholder-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/{fallbackPlaceholder}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>fallbackPlaceholder</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="fallbackPlaceholder" data-endpoint="GETapi--fallbackPlaceholder-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Messages</h1>
+<p>Managing messages</p>
+<h2>Get Messages</h2>
+<p>List all the messages.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/messages" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "type": "email",
+            "text": "Debitis reiciendis culpa voluptatem sit sequi sed beatae. Sunt esse qui quod nam sed error dolor."
+        },
+        {
+            "id": 2,
+            "type": "email",
+            "text": "Fugiat dolorem sunt ut ad. Enim quis omnis fugiat. Unde aliquid voluptatem aliquam fuga. Voluptas sit aliquam assumenda. In eveniet ipsum labore iure."
+        },
+        {
+            "id": 3,
+            "type": "sms",
+            "text": "Iste suscipit esse occaecati laboriosam veniam cum sed. Harum nulla fuga laudantium et hic eaque. Ea sunt sit et porro ad earum eum. Ex nostrum occaecati iure eum rerum."
+        },
+        {
+            "id": 4,
+            "type": "posta",
+            "text": "Assumenda placeat dolores autem porro placeat unde nihil. Quia sed corrupti vitae ea et voluptatem. Dolor inventore neque molestias voluptatem. Nesciunt delectus amet est."
+        },
+        {
+            "id": 5,
+            "type": "sms",
+            "text": "Consequatur aut corporis ipsa nemo et est est magnam. Quibusdam quia dolore est quisquam. Libero adipisci magni quo ex reiciendis ut ea."
+        },
+        {
+            "id": 6,
+            "type": "sms",
+            "text": "Et quia ipsa recusandae nemo est tenetur enim. Sapiente omnis consectetur excepturi eum unde. In cum animi non. Saepe illum sequi dolorum consequuntur minus sunt accusantium."
+        },
+        {
+            "id": 7,
+            "type": "posta",
+            "text": "Beatae quia tempora a earum vel aliquam. Perspiciatis saepe consectetur ut sapiente blanditiis nihil. A illum accusamus amet ut omnis. Maiores molestiae cum nisi tenetur."
+        },
+        {
+            "id": 8,
+            "type": "posta",
+            "text": "Molestiae ad nostrum omnis. Eos eum quasi facere numquam voluptas atque repudiandae consequatur. Facilis doloribus optio neque."
+        },
+        {
+            "id": 9,
+            "type": "email",
+            "text": "Et placeat est quaerat quibusdam recusandae labore. Ab et quia temporibus voluptates possimus et tempore. Velit sequi ut quisquam vel nihil distinctio numquam."
+        },
+        {
+            "id": 10,
+            "type": "sms",
+            "text": "Ipsum eos ut expedita laudantium velit. Distinctio fugit laudantium voluptas doloremque perspiciatis ut nostrum debitis. Molestiae in quia illo vitae. Quidem non molestias ducimus facere."
+        },
+        {
+            "id": 11,
+            "type": "sms",
+            "text": "LoremciaoIpsum"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-messages" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-messages"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-messages"></code></pre>
+</div>
+<div id="execution-error-GETapi-messages" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-messages"></code></pre>
+</div>
+<form id="form-GETapi-messages" data-method="GET" data-path="api/messages" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-messages', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-messages" onclick="tryItOut('GETapi-messages');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-messages" onclick="cancelTryOut('GETapi-messages');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-messages" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/messages</code></b>
+</p>
+</form>
+<h2>api/messages</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/messages" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"type":"consectetur","text":"porro"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "type": "consectetur",
+    "text": "porro"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-messages" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-messages"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-messages"></code></pre>
+</div>
+<div id="execution-error-POSTapi-messages" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-messages"></code></pre>
+</div>
+<form id="form-POSTapi-messages" data-method="POST" data-path="api/messages" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-messages', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-messages" onclick="tryItOut('POSTapi-messages');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-messages" onclick="cancelTryOut('POSTapi-messages');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-messages" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/messages</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="POSTapi-messages" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>text</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="text" data-endpoint="POSTapi-messages" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Get Messages</h2>
+<p>Get a message by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/messages/possimus" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/possimus"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Entry for Message not found"
+}</code></pre>
+<div id="execution-results-GETapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-GETapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-messages--message-"></code></pre>
+</div>
+<form id="form-GETapi-messages--message-" data-method="GET" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-messages--message-" onclick="tryItOut('GETapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-messages--message-" onclick="cancelTryOut('GETapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="GETapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/messages/{message}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/messages/molestias" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"type":"magnam","text":"saepe"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/molestias"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "type": "magnam",
+    "text": "saepe"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-messages--message-"></code></pre>
+</div>
+<form id="form-PUTapi-messages--message-" data-method="PUT" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-messages--message-" onclick="tryItOut('PUTapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-messages--message-" onclick="cancelTryOut('PUTapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="PUTapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="PUTapi-messages--message-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>text</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="text" data-endpoint="PUTapi-messages--message-" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>api/messages/{message}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/messages/eaque" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/eaque"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-messages--message-"></code></pre>
+</div>
+<form id="form-DELETEapi-messages--message-" data-method="DELETE" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-messages--message-" onclick="tryItOut('DELETEapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-messages--message-" onclick="cancelTryOut('DELETEapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="DELETEapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Types</h1>
+<p>Managing types</p>
+<h2>Get Types</h2>
+<p>List all the types.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/types" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "name": "sms"
+        },
+        {
+            "name": "email"
+        },
+        {
+            "name": "posta"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-types" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-types"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-types"></code></pre>
+</div>
+<div id="execution-error-GETapi-types" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-types"></code></pre>
+</div>
+<form id="form-GETapi-types" data-method="GET" data-path="api/types" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-types', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-types" onclick="tryItOut('GETapi-types');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-types" onclick="cancelTryOut('GETapi-types');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-types" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/types</code></b>
+</p>
+</form>
+<h2>Post Type</h2>
+<p>Create a type.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/types" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"soluta"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "soluta"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-types" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-types"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-types"></code></pre>
+</div>
+<div id="execution-error-POSTapi-types" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-types"></code></pre>
+</div>
+<form id="form-POSTapi-types" data-method="POST" data-path="api/types" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-types', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-types" onclick="tryItOut('POSTapi-types');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-types" onclick="cancelTryOut('POSTapi-types');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-types" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/types</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-types" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Get Type</h2>
+<p>Select a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/types/occaecati" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/occaecati"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Entry for Type not found"
+}</code></pre>
+<div id="execution-results-GETapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-GETapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-types--type-"></code></pre>
+</div>
+<form id="form-GETapi-types--type-" data-method="GET" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-types--type-" onclick="tryItOut('GETapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-types--type-" onclick="cancelTryOut('GETapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="GETapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>Put Type</h2>
+<p>Update a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/types/et" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"cumque"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/et"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "cumque"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-types--type-"></code></pre>
+</div>
+<form id="form-PUTapi-types--type-" data-method="PUT" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-types--type-" onclick="tryItOut('PUTapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-types--type-" onclick="cancelTryOut('PUTapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="PUTapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="PUTapi-types--type-" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Delete Type</h2>
+<p>Delete a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/types/hic" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/hic"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-types--type-"></code></pre>
+</div>
+<form id="form-DELETEapi-types--type-" data-method="DELETE" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-types--type-" onclick="tryItOut('DELETEapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-types--type-" onclick="cancelTryOut('DELETEapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="DELETEapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Users</h1>
 <p>Managing users</p>
 <h2>Get Users</h2>
 <p>List all the users.</p>

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreMessageRequest extends BaseFormRequest
+class StoreTypeRequest extends BaseFormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,8 +24,7 @@ class StoreMessageRequest extends BaseFormRequest
     public function rules()
     {
         return [
-            'type' => 'required|exists:types,name|max:45',
-            'text' => 'required|max:200',
+            'name' => 'required|string|unique:types|max:45',
         ];
     }
 
@@ -38,8 +37,8 @@ class StoreMessageRequest extends BaseFormRequest
     public function messages()
     {
         return [
-            'type.required' => 'Type is required!',
-            'text.required' => 'Text is required!',
+            'name.required' => 'Name is required!',
+            'name.unique' => 'Type already exists'
         ];
     }
 }

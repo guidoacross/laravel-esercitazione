@@ -10,11 +10,661 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "eba4e7b9-293a-4daf-a7a1-2a3a04b39a39",
+        "_postman_id": "b2832f31-4476-48d3-a0fb-64cf21c2dd09",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "api\/user Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/user",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/{fallbackPlaceholder}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/:fallbackPlaceholder",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/:fallbackPlaceholder",
+                            "variable": [
+                                {
+                                    "id": "fallbackPlaceholder",
+                                    "key": "fallbackPlaceholder",
+                                    "value": "possimus",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "api\/{fallbackPlaceholder} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/:fallbackPlaceholder",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/:fallbackPlaceholder",
+                                    "variable": [
+                                        {
+                                            "id": "fallbackPlaceholder",
+                                            "key": "fallbackPlaceholder",
+                                            "value": "possimus",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Page Not Found. If error persists, contact ste.samu@across.it\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Messages",
+            "description": "\nManaging messages",
+            "item": [
+                {
+                    "name": "Get Messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the messages.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Messages Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/messages",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the messages.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type\": \"email\",\n            \"text\": \"Debitis reiciendis culpa voluptatem sit sequi sed beatae. Sunt esse qui quod nam sed error dolor.\"\n        },\n        {\n            \"id\": 2,\n            \"type\": \"email\",\n            \"text\": \"Fugiat dolorem sunt ut ad. Enim quis omnis fugiat. Unde aliquid voluptatem aliquam fuga. Voluptas sit aliquam assumenda. In eveniet ipsum labore iure.\"\n        },\n        {\n            \"id\": 3,\n            \"type\": \"sms\",\n            \"text\": \"Iste suscipit esse occaecati laboriosam veniam cum sed. Harum nulla fuga laudantium et hic eaque. Ea sunt sit et porro ad earum eum. Ex nostrum occaecati iure eum rerum.\"\n        },\n        {\n            \"id\": 4,\n            \"type\": \"posta\",\n            \"text\": \"Assumenda placeat dolores autem porro placeat unde nihil. Quia sed corrupti vitae ea et voluptatem. Dolor inventore neque molestias voluptatem. Nesciunt delectus amet est.\"\n        },\n        {\n            \"id\": 5,\n            \"type\": \"sms\",\n            \"text\": \"Consequatur aut corporis ipsa nemo et est est magnam. Quibusdam quia dolore est quisquam. Libero adipisci magni quo ex reiciendis ut ea.\"\n        },\n        {\n            \"id\": 6,\n            \"type\": \"sms\",\n            \"text\": \"Et quia ipsa recusandae nemo est tenetur enim. Sapiente omnis consectetur excepturi eum unde. In cum animi non. Saepe illum sequi dolorum consequuntur minus sunt accusantium.\"\n        },\n        {\n            \"id\": 7,\n            \"type\": \"posta\",\n            \"text\": \"Beatae quia tempora a earum vel aliquam. Perspiciatis saepe consectetur ut sapiente blanditiis nihil. A illum accusamus amet ut omnis. Maiores molestiae cum nisi tenetur.\"\n        },\n        {\n            \"id\": 8,\n            \"type\": \"posta\",\n            \"text\": \"Molestiae ad nostrum omnis. Eos eum quasi facere numquam voluptas atque repudiandae consequatur. Facilis doloribus optio neque.\"\n        },\n        {\n            \"id\": 9,\n            \"type\": \"email\",\n            \"text\": \"Et placeat est quaerat quibusdam recusandae labore. Ab et quia temporibus voluptates possimus et tempore. Velit sequi ut quisquam vel nihil distinctio numquam.\"\n        },\n        {\n            \"id\": 10,\n            \"type\": \"sms\",\n            \"text\": \"Ipsum eos ut expedita laudantium velit. Distinctio fugit laudantium voluptas doloremque perspiciatis ut nostrum debitis. Molestiae in quia illo vitae. Quidem non molestias ducimus facere.\"\n        },\n        {\n            \"id\": 11,\n            \"type\": \"sms\",\n            \"text\": \"LoremciaoIpsum\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"consectetur\",\n    \"text\": \"porro\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "possimus",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Get a message by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Messages Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/messages\/:message",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                                    "variable": [
+                                        {
+                                            "id": "message",
+                                            "key": "message",
+                                            "value": "possimus",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Get a message by id.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Entry for Message not found\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/messages\/{message}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "molestias",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"magnam\",\n    \"text\": \"saepe\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/messages\/{message}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "eaque",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Types",
+            "description": "\nManaging types",
+            "item": [
+                {
+                    "name": "Get Types",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the types.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Types Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/types",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the types.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"name\": \"sms\"\n        },\n        {\n            \"name\": \"email\"\n        },\n        {\n            \"name\": \"posta\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Post Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"soluta\"\n}"
+                        },
+                        "description": "Create a type.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "occaecati",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Select a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Type Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/types\/:type",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "occaecati",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Select a type by id.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Entry for Type not found\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Put Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "et",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"cumque\"\n}"
+                        },
+                        "description": "Update a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "hic",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Delete a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
         {
             "name": "Users",
             "description": "\nManaging users",
@@ -76,7 +726,7 @@
                             },
                             "header": null,
                             "cookie": [],
-                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Gino\",\n            \"lastname\": \"Danieli\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 8,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 10,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 12,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 13,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 14,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 15,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 16,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 17,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 18,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 19,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 20,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 21,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 22,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 23,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 24,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 25,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 27,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 28,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 29,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 30,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 31,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 33,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 34,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 35,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 36,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 37,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 38,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": []\n        },\n        {\n            \"id\": 39,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1995-06-02\",\n            \"age\": 25,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 40,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 41,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                },\n                {\n                    \"name\": \"email\"\n                }\n            ]\n        },\n        {\n            \"id\": 42,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-02\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 43,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-07\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 44,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1996-06-07\",\n            \"age\": 24,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 45,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-10-12\",\n            \"age\": 28,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 46,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-01-12\",\n            \"age\": 29,\n            \"types\": [\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 47,\n            \"name\": \"Poster\",\n            \"lastname\": \"Franceschi\",\n            \"date_of_birth\": \"1992-10-12\",\n            \"age\": 28,\n            \"types\": []\n        }\n    ]\n}"
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Marcangela\",\n            \"lastname\": \"Gengiotta\",\n            \"date_of_birth\": \"1984-10-12\",\n            \"age\": 36,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Geppino\",\n            \"lastname\": \"Gigietto\",\n            \"date_of_birth\": \"1964-10-12\",\n            \"age\": 56,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        }\n    ]\n}"
                         }
                     ]
                 },
@@ -103,7 +753,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"accusantium\",\n    \"lastname\": \"aut\",\n    \"date_of_birth\": \"2021-05-24T09:00:37+0000\",\n    \"types\": \"facere\"\n}"
+                            "raw": "{\n    \"name\": \"sit\",\n    \"lastname\": \"nostrum\",\n    \"date_of_birth\": \"2021-05-25\",\n    \"types\": [\n        \"sed\",\n        \"quam\"\n    ]\n}"
                         },
                         "description": "Store the user in the database.",
                         "auth": {
@@ -125,7 +775,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "officia",
+                                    "value": "sunt",
                                     "description": ""
                                 }
                             ]
@@ -161,7 +811,7 @@
                                         {
                                             "id": "user",
                                             "key": "user",
-                                            "value": "officia",
+                                            "value": "sunt",
                                             "description": ""
                                         }
                                     ]
@@ -185,7 +835,7 @@
                             },
                             "header": null,
                             "cookie": [],
-                            "body": "{\n    \"message\": \"No query results for model [App\\\\User] officia\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\NotFoundHttpException\",\n    \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 224,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n            \"line\": 200,\n            \"function\": \"prepareException\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\app\\\\Exceptions\\\\Handler.php\",\n            \"line\": 49,\n            \"function\": \"render\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\nunomaduro\\\\collision\\\\src\\\\Adapters\\\\Laravel\\\\ExceptionHandler.php\",\n            \"line\": 68,\n            \"function\": \"render\",\n            \"class\": \"App\\\\Exceptions\\\\Handler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Pipeline.php\",\n            \"line\": 51,\n            \"function\": \"render\",\n            \"class\": \"NunoMaduro\\\\Collision\\\\Adapters\\\\Laravel\\\\ExceptionHandler\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 176,\n            \"function\": \"handleException\",\n            \"class\": \"Illuminate\\\\Routing\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests.php\",\n            \"line\": 59,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Routing\\\\Middleware\\\\ThrottleRequests\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 105,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 683,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 658,\n            \"function\": \"runRouteWithinStack\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 624,\n            \"function\": \"runRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Routing\\\\Router.php\",\n            \"line\": 613,\n            \"function\": \"dispatchToRoute\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 170,\n            \"function\": \"dispatch\",\n            \"class\": \"Illuminate\\\\Routing\\\\Router\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 130,\n            \"function\": \"Illuminate\\\\Foundation\\\\Http\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\fruitcake\\\\laravel-cors\\\\src\\\\HandleCors.php\",\n            \"line\": 52,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Fruitcake\\\\Cors\\\\HandleCors\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest.php\",\n            \"line\": 21,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\TransformsRequest\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize.php\",\n            \"line\": 27,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\ValidatePostSize\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\CheckForMaintenanceMode.php\",\n            \"line\": 63,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Middleware\\\\CheckForMaintenanceMode\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\fideloper\\\\proxy\\\\src\\\\TrustProxies.php\",\n            \"line\": 57,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 171,\n            \"function\": \"handle\",\n            \"class\": \"Fideloper\\\\Proxy\\\\TrustProxies\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Pipeline\\\\Pipeline.php\",\n            \"line\": 105,\n            \"function\": \"Illuminate\\\\Pipeline\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 145,\n            \"function\": \"then\",\n            \"class\": \"Illuminate\\\\Pipeline\\\\Pipeline\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Http\\\\Kernel.php\",\n            \"line\": 110,\n            \"function\": \"sendRequestThroughRouter\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 324,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Http\\\\Kernel\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 305,\n            \"function\": \"callLaravelOrLumenRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 76,\n            \"function\": \"makeApiCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 51,\n            \"function\": \"makeResponseCall\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls.php\",\n            \"line\": 41,\n            \"function\": \"makeResponseCallIfEnabledAndNoSuccessResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 236,\n            \"function\": \"__invoke\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Strategies\\\\Responses\\\\ResponseCalls\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 172,\n            \"function\": \"iterateThroughStrategies\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Extracting\\\\Generator.php\",\n            \"line\": 127,\n            \"function\": \"fetchResponses\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 119,\n            \"function\": \"processRoute\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Extracting\\\\Generator\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\knuckleswtf\\\\scribe\\\\src\\\\Commands\\\\GenerateDocumentation.php\",\n            \"line\": 73,\n            \"function\": \"processRoutes\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 36,\n            \"function\": \"handle\",\n            \"class\": \"Knuckles\\\\Scribe\\\\Commands\\\\GenerateDocumentation\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Util.php\",\n            \"line\": 37,\n            \"function\": \"Illuminate\\\\Container\\\\{closure}\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 93,\n            \"function\": \"unwrapIfClosure\",\n            \"class\": \"Illuminate\\\\Container\\\\Util\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\BoundMethod.php\",\n            \"line\": 37,\n            \"function\": \"callBoundMethod\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Container\\\\Container.php\",\n            \"line\": 590,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\BoundMethod\",\n            \"type\": \"::\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 134,\n            \"function\": \"call\",\n            \"class\": \"Illuminate\\\\Container\\\\Container\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Command\\\\Command.php\",\n            \"line\": 255,\n            \"function\": \"execute\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Command.php\",\n            \"line\": 121,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 1009,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Command\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 273,\n            \"function\": \"doRunCommand\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\symfony\\\\console\\\\Application.php\",\n            \"line\": 149,\n            \"function\": \"doRun\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Console\\\\Application.php\",\n            \"line\": 93,\n            \"function\": \"run\",\n            \"class\": \"Symfony\\\\Component\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Console\\\\Kernel.php\",\n            \"line\": 131,\n            \"function\": \"run\",\n            \"class\": \"Illuminate\\\\Console\\\\Application\",\n            \"type\": \"->\"\n        },\n        {\n            \"file\": \"C:\\\\laragon\\\\www\\\\laravel-esercitazione\\\\artisan\",\n            \"line\": 37,\n            \"function\": \"handle\",\n            \"class\": \"Illuminate\\\\Foundation\\\\Console\\\\Kernel\",\n            \"type\": \"->\"\n        }\n    ]\n}"
+                            "body": "{\n    \"error\": \"Entry for User not found\"\n}"
                         }
                     ]
                 },
@@ -202,7 +852,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "voluptas",
+                                    "value": "quos",
                                     "description": ""
                                 }
                             ]
@@ -220,7 +870,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"name\": \"quibusdam\",\n    \"lastname\": \"neque\",\n    \"date_of_birth\": \"2021-05-24T09:00:37+0000\",\n    \"types\": \"error\"\n}"
+                            "raw": "{\n    \"name\": \"quae\",\n    \"lastname\": \"aliquam\",\n    \"date_of_birth\": \"2021-05-25\",\n    \"types\": [\n        \"et\",\n        \"quam\"\n    ]\n}"
                         },
                         "description": "Update a user in the database by ID.",
                         "auth": {
@@ -242,7 +892,7 @@
                                 {
                                     "id": "user",
                                     "key": "user",
-                                    "value": "vitae",
+                                    "value": "similique",
                                     "description": ""
                                 }
                             ]
