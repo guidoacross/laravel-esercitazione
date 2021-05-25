@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Log extends Model
 {
-    
-    protected $table = 'logs';
-    protected $connection = 'mysql';
-    
+
+    protected $fillable = ['user_id', 'code', 'file', 'line', 'message', 'trace'];
 }

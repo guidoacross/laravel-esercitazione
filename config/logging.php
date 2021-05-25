@@ -90,28 +90,5 @@ return [
             'level' => 'debug',
         ],
     ],
-    [ 
-        'stack' => [
-            'name' => 'Log Stack',
-            'driver' => 'stack',
-            'channels' => ['database', 'mongodb'],
-        ],
-
-        'database' => [
-            'driver' => 'custom',
-            'via' => danielme85\LaravelLogToDB\LogToDbHandler::class,
-            'level' => env('APP_LOG_LEVEL', 'debug'),
-            'name' => 'My DB Log',
-            'connection' => 'default',
-            'collection' => 'logs',
-            'detailed' => true,
-            'queue' => false,
-            'queue_name' => '',
-            'queue_connection' => '',
-            'processors' => [
-                //Monolog\Processor\HostnameProcessor::class
-            ]
-        ],
-    ],
 
 ];

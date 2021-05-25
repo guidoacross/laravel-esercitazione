@@ -6,6 +6,8 @@ use Exception;
 use Symfony\Component\HttpFoundation\Exception\RequestExceptionInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Support\Facades\Auth;
+use App\Log;
 
 class Handler extends ExceptionHandler
 {
@@ -36,6 +38,24 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+
+        /**
+         * Checks if a user has logged in to the system, so the error will be recorded with the user id
+         * 
+         *  $userId = 0;
+         *  if (Auth::user()) {
+         *      $userId = Auth::user()->id;
+         *  }
+         */
+        
+        $data = array(
+            //'user_id' => $userId,
+            'code' => 500,
+            'file' => $exception->getFile(),
+            'line' => $exception->getLine(),
+            'message' => $exception->getMessage()
+        );
+        Log::create($data);
         parent::report($exception);
     }
 

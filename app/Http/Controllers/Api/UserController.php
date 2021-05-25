@@ -52,8 +52,8 @@ class UserController extends Controller
      */
 
     public function store(StoreUserRequest $request) {
-        $request->validated();
-        try {            
+        try {     
+            $request->validated();
             $user = User::create([
                 'name'          =>  $request->name,
                 'lastname'      =>  $request->lastname, 

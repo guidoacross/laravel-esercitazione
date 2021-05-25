@@ -15,14 +15,11 @@ class CreateLogsTable extends Migration
     {
         Schema::create('logs', function (Blueprint $table) {
             $table->increments('id');
+            //$table->bigInteger('user_id')->nullable();
+            $table->integer('code')->default(0);
             $table->text('message')->nullable();
-            $table->string('channel')->nullable();
-            $table->integer('level')->default(0);
-            $table->string('level_name', 20);
-            $table->integer('unix_time');
-            $table->text('datetime')->nullable();
-            $table->longText('context')->nullable();
-            $table->text('extra')->nullable();
+            $table->text('file')->nullable();
+            $table->integer('line')->nullable();
             $table->timestamps();
         });
     }
