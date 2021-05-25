@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\User;
 use App\Type;
+use Exception;
+use PhpParser\Node\Stmt\TryCatch;
 
 /**
  * @group Users
@@ -50,18 +52,22 @@ class UserController extends Controller
      */
 
     public function store(StoreUserRequest $request) {
-
-        $user = User::create([
-            'name'          =>  $request->name,
-            'lastname'      =>  $request->lastname, 
-            'date_of_birth' =>  $request->date_of_birth,
-            'age'           =>  $this->calcAge($request->date_of_birth)
-        ]);
-        foreach ($request->types as $type) {   
-            $typeId = Type::select('id')->where('name',$type)->get();
-            $user->types()->attach($typeId);
+        $request->validated();
+        try {            
+            $user = User::create([
+                'name'          =>  $request->name,
+                'lastname'      =>  $request->lastname, 
+                'date_of_birth' =>  $request->date_of_birth,
+                'age'           =>  $this->calcAge($request->date_of_birth)
+            ]);
+            foreach ($request->types as $type) {   
+                $typeId = Type::select('id')->where('name',$type)->get();
+                $user->types()->attach($typeId);
+            }
+            return new UserResource($user);
+        } catch (Exception $e) {
+            return $e->getMessage();
         }
-        return new UserResource($user);
     }
 
     /**
@@ -71,19 +77,24 @@ class UserController extends Controller
      */
 
     public function update(User $user, StoreUserRequest $request) {
-        $user->update([
-            'name'          =>  $request->name,
-            'lastname'      =>  $request->lastname,
-            'date_of_birth' =>  $request->date_of_birth,
-            'age'           =>  $this->calcAge($request->date_of_birth)
-        ]);
-        $idList = array();
-        foreach ($request->types as $type) {
-            $typeId = Type::select('id')->where('name', $type)->pluck('id')->toArray();
-            array_push($idList,$typeId[0]);
+        $request->validated();
+        try {
+            $user->update([
+                'name'          =>  $request->name,
+                'lastname'      =>  $request->lastname,
+                'date_of_birth' =>  $request->date_of_birth,
+                'age'           =>  $this->calcAge($request->date_of_birth)
+            ]);
+            $idList = array();
+            foreach ($request->types as $type) {
+                $typeId = Type::select('id')->where('name', $type)->pluck('id')->first();
+                array_push($idList,$typeId);
+            }
+            $user->types()->sync($idList);
+            return new UserResource($user);
+        } catch (\Exception $e) {
+            return $e->getMessage();
         }
-        $user->types()->sync($idList);
-        return new UserResource($user);
     }
 
     /**
