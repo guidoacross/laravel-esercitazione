@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\TypeResource;
+use App\Events\UserCreated;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
@@ -14,6 +15,8 @@ use App\User;
 use App\Type;
 use Exception;
 use PhpParser\Node\Stmt\TryCatch;
+use App\Mail\NewUserNotification;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * @group Users
