@@ -11,15 +11,15 @@ class Type extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-    ];
+    protected $fillable = ['name'];
+    public $timestamps = false;
+
 
     /**
      * The users that belong to the type.
      */
     public function users()
     {
-        return $this->belongsToMany('App\user');
+        return $this->belongsToMany('App\User');
     }
 }

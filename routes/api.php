@@ -17,13 +17,19 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//User
-/*
-Route::get('users','Api\UserController@index');
-Route::get('users/{user}', 'Api\UserController@show');
-Route::post('users', 'Api\UserController@store');
-Route::put('users/{user}', 'Api\UserController@update');
-Route::delete('users/{user}', 'Api\UserController@destroy');
-*/
-
+//user
 Route::apiResource('users','Api\UserController');
+//message
+Route::apiResource('messages', 'Api\MessageController');
+//type
+Route::apiResource('types', 'Api\TypeController');
+
+
+
+
+//page not found
+Route::fallback(function () {
+    return response()->json([
+            'message' => 'Page Not Found. If error persists, contact ste.samu@across.it'
+        ], 404);
+});

@@ -6,57 +6,105 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\TypeResource;
+use App\Events\UserCreated;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\User;
 use App\Type;
+use Exception;
+use PhpParser\Node\Stmt\TryCatch;
+use App\Mail\NewUserNotification;
+use Illuminate\Support\Facades\Mail;
+
+/**
+ * @group Users
+ * 
+ * Managing users
+ */
 
 class UserController extends Controller
 {
+
+    /**
+     * Get Users
+     * 
+     * List all the users.
+     */
+
     public function index() {
         $users = User::with('types')->get();
         return UserResource::collection($users);
     }
 
+    /**
+     * Get User
+     * 
+     * Retriew an user by ID.
+     */
+
     public function show(User $user) {
         return new UserResource($user) ;
     }
 
-    public function store(StoreUserRequest $request) {
+    /**
+     * Post User
+     * 
+     * Store the user in the database.
+     */
 
-        $user = User::create([
-            'name'          =>  $request->name,
-            'lastname'      =>  $request->lastname,
-            'date_of_birth' =>  $request->date_of_birth,
-            'age'           =>  $this->calcAge($request->date_of_birth)
-        ]);
-        foreach ($request->types as $type) {   
-            $typeId = Type::select('id')->where('name',$type)->get();
-            $user->types()->attach($typeId);
+    public function store(StoreUserRequest $request) {
+        try {     
+            $request->validated();
+            $user = User::create([
+                'name'          =>  $request->name,
+                'lastname'      =>  $request->lastname, 
+                'date_of_birth' =>  $request->date_of_birth,
+                'age'           =>  $this->calcAge($request->date_of_birth)
+            ]);
+            foreach ($request->types as $type) {   
+                $typeId = Type::select('id')->where('name',$type)->get();
+                $user->types()->attach($typeId);
+            }
+            return new UserResource($user);
+        } catch (Exception $e) {
+            return $e->getMessage();
         }
-        return new UserResource($user);
     }
+
+    /**
+     * Put User
+     * 
+     * Update a user in the database by ID.
+     */
 
     public function update(User $user, StoreUserRequest $request) {
-        $user->update([
-            'name'          =>  $request->name,
-            'lastname'      =>  $request->lastname,
-            'date_of_birth' =>  $request->date_of_birth,
-            'age'           =>  $this->calcAge($request->date_of_birth)
-        ]);
-        
-        $idList = array();
-        
-        foreach ($request->types as $type) {
-
-            $typeId = Type::select('id')->where('name', $type)->pluck('id')->toArray();
-            array_push($idList,$typeId[0]);
+        $request->validated();
+        try {
+            $user->update([
+                'name'          =>  $request->name,
+                'lastname'      =>  $request->lastname,
+                'date_of_birth' =>  $request->date_of_birth,
+                'age'           =>  $this->calcAge($request->date_of_birth)
+            ]);
+            $idList = array();
+            foreach ($request->types as $type) {
+                $typeId = Type::select('id')->where('name', $type)->pluck('id')->first();
+                array_push($idList,$typeId);
+            }
+            $user->types()->sync($idList);
+            return new UserResource($user);
+        } catch (\Exception $e) {
+            return $e->getMessage();
         }
-        $user->types()->sync($idList);
-        return new UserResource($user);
     }
+
+    /**
+     * Delete User
+     * 
+     * Delete a user by ID.
+     */
 
     public function destroy(User $user) {
         $user->delete();

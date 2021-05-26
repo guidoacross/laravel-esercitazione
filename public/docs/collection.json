@@ -1,0 +1,925 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "b2832f31-4476-48d3-a0fb-64cf21c2dd09",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "api\/user Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/user",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/{fallbackPlaceholder}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/:fallbackPlaceholder",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/:fallbackPlaceholder",
+                            "variable": [
+                                {
+                                    "id": "fallbackPlaceholder",
+                                    "key": "fallbackPlaceholder",
+                                    "value": "possimus",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "api\/{fallbackPlaceholder} Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/:fallbackPlaceholder",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/:fallbackPlaceholder",
+                                    "variable": [
+                                        {
+                                            "id": "fallbackPlaceholder",
+                                            "key": "fallbackPlaceholder",
+                                            "value": "possimus",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"message\": \"Page Not Found. If error persists, contact ste.samu@across.it\"\n}"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Messages",
+            "description": "\nManaging messages",
+            "item": [
+                {
+                    "name": "Get Messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the messages.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Messages Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/messages",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the messages.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type\": \"email\",\n            \"text\": \"Debitis reiciendis culpa voluptatem sit sequi sed beatae. Sunt esse qui quod nam sed error dolor.\"\n        },\n        {\n            \"id\": 2,\n            \"type\": \"email\",\n            \"text\": \"Fugiat dolorem sunt ut ad. Enim quis omnis fugiat. Unde aliquid voluptatem aliquam fuga. Voluptas sit aliquam assumenda. In eveniet ipsum labore iure.\"\n        },\n        {\n            \"id\": 3,\n            \"type\": \"sms\",\n            \"text\": \"Iste suscipit esse occaecati laboriosam veniam cum sed. Harum nulla fuga laudantium et hic eaque. Ea sunt sit et porro ad earum eum. Ex nostrum occaecati iure eum rerum.\"\n        },\n        {\n            \"id\": 4,\n            \"type\": \"posta\",\n            \"text\": \"Assumenda placeat dolores autem porro placeat unde nihil. Quia sed corrupti vitae ea et voluptatem. Dolor inventore neque molestias voluptatem. Nesciunt delectus amet est.\"\n        },\n        {\n            \"id\": 5,\n            \"type\": \"sms\",\n            \"text\": \"Consequatur aut corporis ipsa nemo et est est magnam. Quibusdam quia dolore est quisquam. Libero adipisci magni quo ex reiciendis ut ea.\"\n        },\n        {\n            \"id\": 6,\n            \"type\": \"sms\",\n            \"text\": \"Et quia ipsa recusandae nemo est tenetur enim. Sapiente omnis consectetur excepturi eum unde. In cum animi non. Saepe illum sequi dolorum consequuntur minus sunt accusantium.\"\n        },\n        {\n            \"id\": 7,\n            \"type\": \"posta\",\n            \"text\": \"Beatae quia tempora a earum vel aliquam. Perspiciatis saepe consectetur ut sapiente blanditiis nihil. A illum accusamus amet ut omnis. Maiores molestiae cum nisi tenetur.\"\n        },\n        {\n            \"id\": 8,\n            \"type\": \"posta\",\n            \"text\": \"Molestiae ad nostrum omnis. Eos eum quasi facere numquam voluptas atque repudiandae consequatur. Facilis doloribus optio neque.\"\n        },\n        {\n            \"id\": 9,\n            \"type\": \"email\",\n            \"text\": \"Et placeat est quaerat quibusdam recusandae labore. Ab et quia temporibus voluptates possimus et tempore. Velit sequi ut quisquam vel nihil distinctio numquam.\"\n        },\n        {\n            \"id\": 10,\n            \"type\": \"sms\",\n            \"text\": \"Ipsum eos ut expedita laudantium velit. Distinctio fugit laudantium voluptas doloremque perspiciatis ut nostrum debitis. Molestiae in quia illo vitae. Quidem non molestias ducimus facere.\"\n        },\n        {\n            \"id\": 11,\n            \"type\": \"sms\",\n            \"text\": \"LoremciaoIpsum\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"consectetur\",\n    \"text\": \"porro\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Messages",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "possimus",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Get a message by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Messages Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/messages\/:message",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                                    "variable": [
+                                        {
+                                            "id": "message",
+                                            "key": "message",
+                                            "value": "possimus",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Get a message by id.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Entry for Message not found\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/messages\/{message}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "molestias",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"type\": \"magnam\",\n    \"text\": \"saepe\"\n}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "api\/messages\/{message}",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/messages\/:message",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/messages\/:message",
+                            "variable": [
+                                {
+                                    "id": "message",
+                                    "key": "message",
+                                    "value": "eaque",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Types",
+            "description": "\nManaging types",
+            "item": [
+                {
+                    "name": "Get Types",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the types.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Types Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/types",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the types.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"name\": \"sms\"\n        },\n        {\n            \"name\": \"email\"\n        },\n        {\n            \"name\": \"posta\"\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Post Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"soluta\"\n}"
+                        },
+                        "description": "Create a type.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "occaecati",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Select a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Type Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/types\/:type",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                                    "variable": [
+                                        {
+                                            "id": "type",
+                                            "key": "type",
+                                            "value": "occaecati",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Select a type by id.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Entry for Type not found\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Put Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "et",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"cumque\"\n}"
+                        },
+                        "description": "Update a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Type",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/types\/:type",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/types\/:type",
+                            "variable": [
+                                {
+                                    "id": "type",
+                                    "key": "type",
+                                    "value": "hic",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Delete a type by id.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Users",
+            "description": "\nManaging users",
+            "item": [
+                {
+                    "name": "Get Users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "List all the users.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get Users Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "List all the users.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Gianni\",\n            \"lastname\": \"Eesti\",\n            \"date_of_birth\": \"1994-10-12\",\n            \"age\": 26,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"name\": \"Marcangela\",\n            \"lastname\": \"Gengiotta\",\n            \"date_of_birth\": \"1984-10-12\",\n            \"age\": 36,\n            \"types\": [\n                {\n                    \"name\": \"posta\"\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"name\": \"Geppino\",\n            \"lastname\": \"Gigietto\",\n            \"date_of_birth\": \"1964-10-12\",\n            \"age\": 56,\n            \"types\": [\n                {\n                    \"name\": \"email\"\n                },\n                {\n                    \"name\": \"sms\"\n                }\n            ]\n        }\n    ]\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Post User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"sit\",\n    \"lastname\": \"nostrum\",\n    \"date_of_birth\": \"2021-05-25\",\n    \"types\": [\n        \"sed\",\n        \"quam\"\n    ]\n}"
+                        },
+                        "description": "Store the user in the database.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "sunt",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Retriew an user by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "name": "Get User Response #1",
+                            "originalRequest": {
+                                "url": {
+                                    "protocol": "http",
+                                    "host": "{{baseUrl}}",
+                                    "path": "api\/users\/:user",
+                                    "query": [],
+                                    "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                                    "variable": [
+                                        {
+                                            "id": "user",
+                                            "key": "user",
+                                            "value": "sunt",
+                                            "description": ""
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application\/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application\/json"
+                                    }
+                                ],
+                                "body": null,
+                                "description": "Retriew an user by ID.",
+                                "auth": {
+                                    "type": "noauth"
+                                }
+                            },
+                            "header": null,
+                            "cookie": [],
+                            "body": "{\n    \"error\": \"Entry for User not found\"\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Put User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "quos",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"quae\",\n    \"lastname\": \"aliquam\",\n    \"date_of_birth\": \"2021-05-25\",\n    \"types\": [\n        \"et\",\n        \"quam\"\n    ]\n}"
+                        },
+                        "description": "Update a user in the database by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/users\/:user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/users\/:user",
+                            "variable": [
+                                {
+                                    "id": "user",
+                                    "key": "user",
+                                    "value": "similique",
+                                    "description": ""
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Delete a user by ID.",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}

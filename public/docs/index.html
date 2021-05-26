@@ -1,0 +1,1940 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Laravel Documentation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css" media="screen" />
+        <link rel="stylesheet" href="css/print.css" media="print" />
+        <script src="js/all.js"></script>
+
+        <link rel="stylesheet" href="css/highlight-darcula.css" media="" />
+        <script src="js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="" data-languages="[&quot;bash&quot;,&quot;javascript&quot;]">
+<a href="#" id="nav-button">
+      <span>
+        NAV
+            <img src="images/navbar.png" alt="-image" class=""/>
+      </span>
+</a>
+<div class="tocify-wrapper">
+        <img src="https://www.engage.it/wp-content/uploads/2017/05/Logo_Across_Engage-620x348.png" alt="logo" class="logo" style="padding-top: 10px;" width="230px"/>
+                <div class="lang-selector">
+                            <a href="#" data-language-name="bash">bash</a>
+                            <a href="#" data-language-name="javascript">javascript</a>
+                    </div>
+        <div class="search">
+        <input type="text" class="search" id="input-search" placeholder="Search">
+    </div>
+    <ul class="search-results"></ul>
+
+    <ul id="toc">
+    </ul>
+
+            <ul class="toc-footer" id="toc-footer">
+                            <li><a href="./collection.json">View Postman collection</a></li>
+                            <li><a href="./openapi.yaml">View OpenAPI (Swagger) spec</a></li>
+                            <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
+                    </ul>
+            <ul class="toc-footer" id="last-updated">
+            <li>Last updated: May 24 2021</li>
+        </ul>
+</div>
+<div class="page-wrapper">
+    <div class="dark-box"></div>
+    <div class="content">
+        <h1>Introduction</h1>
+<p>This documentation aims to provide all the information you need to work with our API.</p>
+<aside>As you scroll, you'll see code examples for working with the API in different programming languages in the dark area to the right (or as part of the content on mobile).
+You can switch the language used with the tabs at the top right (or from the nav menu at the top left on mobile).</aside>
+<blockquote>
+<p>Base URL</p>
+</blockquote>
+<pre><code class="language-yaml">http://localhost</code></pre><h1>Authenticating requests</h1>
+<p>This API is not authenticated.</p><h1>Endpoints</h1>
+<h2>api/user</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/user" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/user"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (401):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Unauthenticated."
+}</code></pre>
+<div id="execution-results-GETapi-user" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-user"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-user"></code></pre>
+</div>
+<div id="execution-error-GETapi-user" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-user"></code></pre>
+</div>
+<form id="form-GETapi-user" data-method="GET" data-path="api/user" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-user', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-user" onclick="tryItOut('GETapi-user');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-user" onclick="cancelTryOut('GETapi-user');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-user" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/user</code></b>
+</p>
+</form>
+<h2>api/{fallbackPlaceholder}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/possimus" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/possimus"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "Page Not Found. If error persists, contact ste.samu@across.it"
+}</code></pre>
+<div id="execution-results-GETapi--fallbackPlaceholder-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi--fallbackPlaceholder-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi--fallbackPlaceholder-"></code></pre>
+</div>
+<div id="execution-error-GETapi--fallbackPlaceholder-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi--fallbackPlaceholder-"></code></pre>
+</div>
+<form id="form-GETapi--fallbackPlaceholder-" data-method="GET" data-path="api/{fallbackPlaceholder}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi--fallbackPlaceholder-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi--fallbackPlaceholder-" onclick="tryItOut('GETapi--fallbackPlaceholder-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi--fallbackPlaceholder-" onclick="cancelTryOut('GETapi--fallbackPlaceholder-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi--fallbackPlaceholder-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/{fallbackPlaceholder}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>fallbackPlaceholder</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="fallbackPlaceholder" data-endpoint="GETapi--fallbackPlaceholder-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Messages</h1>
+<p>Managing messages</p>
+<h2>Get Messages</h2>
+<p>List all the messages.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/messages" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "type": "email",
+            "text": "Debitis reiciendis culpa voluptatem sit sequi sed beatae. Sunt esse qui quod nam sed error dolor."
+        },
+        {
+            "id": 2,
+            "type": "email",
+            "text": "Fugiat dolorem sunt ut ad. Enim quis omnis fugiat. Unde aliquid voluptatem aliquam fuga. Voluptas sit aliquam assumenda. In eveniet ipsum labore iure."
+        },
+        {
+            "id": 3,
+            "type": "sms",
+            "text": "Iste suscipit esse occaecati laboriosam veniam cum sed. Harum nulla fuga laudantium et hic eaque. Ea sunt sit et porro ad earum eum. Ex nostrum occaecati iure eum rerum."
+        },
+        {
+            "id": 4,
+            "type": "posta",
+            "text": "Assumenda placeat dolores autem porro placeat unde nihil. Quia sed corrupti vitae ea et voluptatem. Dolor inventore neque molestias voluptatem. Nesciunt delectus amet est."
+        },
+        {
+            "id": 5,
+            "type": "sms",
+            "text": "Consequatur aut corporis ipsa nemo et est est magnam. Quibusdam quia dolore est quisquam. Libero adipisci magni quo ex reiciendis ut ea."
+        },
+        {
+            "id": 6,
+            "type": "sms",
+            "text": "Et quia ipsa recusandae nemo est tenetur enim. Sapiente omnis consectetur excepturi eum unde. In cum animi non. Saepe illum sequi dolorum consequuntur minus sunt accusantium."
+        },
+        {
+            "id": 7,
+            "type": "posta",
+            "text": "Beatae quia tempora a earum vel aliquam. Perspiciatis saepe consectetur ut sapiente blanditiis nihil. A illum accusamus amet ut omnis. Maiores molestiae cum nisi tenetur."
+        },
+        {
+            "id": 8,
+            "type": "posta",
+            "text": "Molestiae ad nostrum omnis. Eos eum quasi facere numquam voluptas atque repudiandae consequatur. Facilis doloribus optio neque."
+        },
+        {
+            "id": 9,
+            "type": "email",
+            "text": "Et placeat est quaerat quibusdam recusandae labore. Ab et quia temporibus voluptates possimus et tempore. Velit sequi ut quisquam vel nihil distinctio numquam."
+        },
+        {
+            "id": 10,
+            "type": "sms",
+            "text": "Ipsum eos ut expedita laudantium velit. Distinctio fugit laudantium voluptas doloremque perspiciatis ut nostrum debitis. Molestiae in quia illo vitae. Quidem non molestias ducimus facere."
+        },
+        {
+            "id": 11,
+            "type": "sms",
+            "text": "LoremciaoIpsum"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-messages" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-messages"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-messages"></code></pre>
+</div>
+<div id="execution-error-GETapi-messages" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-messages"></code></pre>
+</div>
+<form id="form-GETapi-messages" data-method="GET" data-path="api/messages" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-messages', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-messages" onclick="tryItOut('GETapi-messages');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-messages" onclick="cancelTryOut('GETapi-messages');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-messages" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/messages</code></b>
+</p>
+</form>
+<h2>api/messages</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/messages" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"type":"consectetur","text":"porro"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "type": "consectetur",
+    "text": "porro"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-messages" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-messages"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-messages"></code></pre>
+</div>
+<div id="execution-error-POSTapi-messages" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-messages"></code></pre>
+</div>
+<form id="form-POSTapi-messages" data-method="POST" data-path="api/messages" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-messages', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-messages" onclick="tryItOut('POSTapi-messages');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-messages" onclick="cancelTryOut('POSTapi-messages');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-messages" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/messages</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="POSTapi-messages" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>text</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="text" data-endpoint="POSTapi-messages" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Get Messages</h2>
+<p>Get a message by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/messages/possimus" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/possimus"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Entry for Message not found"
+}</code></pre>
+<div id="execution-results-GETapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-GETapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-messages--message-"></code></pre>
+</div>
+<form id="form-GETapi-messages--message-" data-method="GET" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-messages--message-" onclick="tryItOut('GETapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-messages--message-" onclick="cancelTryOut('GETapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="GETapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>api/messages/{message}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/messages/molestias" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"type":"magnam","text":"saepe"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/molestias"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "type": "magnam",
+    "text": "saepe"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-messages--message-"></code></pre>
+</div>
+<form id="form-PUTapi-messages--message-" data-method="PUT" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-messages--message-" onclick="tryItOut('PUTapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-messages--message-" onclick="cancelTryOut('PUTapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="PUTapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="PUTapi-messages--message-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>text</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="text" data-endpoint="PUTapi-messages--message-" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>api/messages/{message}</h2>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/messages/eaque" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/messages/eaque"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-messages--message-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-messages--message-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-messages--message-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-messages--message-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-messages--message-"></code></pre>
+</div>
+<form id="form-DELETEapi-messages--message-" data-method="DELETE" data-path="api/messages/{message}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-messages--message-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-messages--message-" onclick="tryItOut('DELETEapi-messages--message-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-messages--message-" onclick="cancelTryOut('DELETEapi-messages--message-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-messages--message-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/messages/{message}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>message</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="message" data-endpoint="DELETEapi-messages--message-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Types</h1>
+<p>Managing types</p>
+<h2>Get Types</h2>
+<p>List all the types.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/types" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "name": "sms"
+        },
+        {
+            "name": "email"
+        },
+        {
+            "name": "posta"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-types" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-types"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-types"></code></pre>
+</div>
+<div id="execution-error-GETapi-types" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-types"></code></pre>
+</div>
+<form id="form-GETapi-types" data-method="GET" data-path="api/types" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-types', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-types" onclick="tryItOut('GETapi-types');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-types" onclick="cancelTryOut('GETapi-types');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-types" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/types</code></b>
+</p>
+</form>
+<h2>Post Type</h2>
+<p>Create a type.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/types" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"soluta"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "soluta"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-types" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-types"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-types"></code></pre>
+</div>
+<div id="execution-error-POSTapi-types" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-types"></code></pre>
+</div>
+<form id="form-POSTapi-types" data-method="POST" data-path="api/types" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-types', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-POSTapi-types" onclick="tryItOut('POSTapi-types');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-POSTapi-types" onclick="cancelTryOut('POSTapi-types');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-POSTapi-types" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/types</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-types" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Get Type</h2>
+<p>Select a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/types/occaecati" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/occaecati"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "error": "Entry for Type not found"
+}</code></pre>
+<div id="execution-results-GETapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-GETapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-types--type-"></code></pre>
+</div>
+<form id="form-GETapi-types--type-" data-method="GET" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETapi-types--type-" onclick="tryItOut('GETapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETapi-types--type-" onclick="cancelTryOut('GETapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="GETapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>Put Type</h2>
+<p>Update a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/types/et" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"cumque"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/et"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "cumque"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-types--type-"></code></pre>
+</div>
+<form id="form-PUTapi-types--type-" data-method="PUT" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-PUTapi-types--type-" onclick="tryItOut('PUTapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-PUTapi-types--type-" onclick="cancelTryOut('PUTapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-PUTapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="PUTapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="PUTapi-types--type-" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Delete Type</h2>
+<p>Delete a type by id.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/types/hic" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/types/hic"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-types--type-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-types--type-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-types--type-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-types--type-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-types--type-"></code></pre>
+</div>
+<form id="form-DELETEapi-types--type-" data-method="DELETE" data-path="api/types/{type}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-types--type-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-DELETEapi-types--type-" onclick="tryItOut('DELETEapi-types--type-');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-DELETEapi-types--type-" onclick="cancelTryOut('DELETEapi-types--type-');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-DELETEapi-types--type-" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/types/{type}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="type" data-endpoint="DELETEapi-types--type-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form><h1>Users</h1>
+<p>Managing users</p>
+<h2>Get Users</h2>
+<p>List all the users.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/users" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/users"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "data": [
+        {
+            "id": 1,
+            "name": "Gino",
+            "lastname": "Danieli",
+            "date_of_birth": "1994-10-12",
+            "age": 26,
+            "types": [
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 4,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 5,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 6,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 7,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 8,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 9,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 10,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 11,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 12,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 13,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 14,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 15,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 16,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 17,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 18,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 19,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 20,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 21,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 22,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 23,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 24,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 25,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 26,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 27,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 28,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 29,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 30,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 31,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 32,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 33,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 34,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 35,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 36,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 37,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": []
+        },
+        {
+            "id": 39,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1995-06-02",
+            "age": 25,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 40,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1996-06-02",
+            "age": 24,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 41,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1996-06-02",
+            "age": 24,
+            "types": [
+                {
+                    "name": "sms"
+                },
+                {
+                    "name": "email"
+                }
+            ]
+        },
+        {
+            "id": 42,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1996-06-02",
+            "age": 24,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1996-06-07",
+            "age": 24,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 44,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1996-06-07",
+            "age": 24,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 45,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1992-10-12",
+            "age": 28,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 46,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1992-01-12",
+            "age": 29,
+            "types": [
+                {
+                    "name": "sms"
+                }
+            ]
+        },
+        {
+            "id": 47,
+            "name": "Poster",
+            "lastname": "Franceschi",
+            "date_of_birth": "1992-10-12",
+            "age": 28,
+            "types": []
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-users" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-users"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users"></code></pre>
+</div>
+<div id="execution-error-GETapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users"></code></pre>
+</div>
+<form id="form-GETapi-users" data-method="GET" data-path="api/users" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-users', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/users</code></b>
+</p>
+</form>
+<h2>Post User</h2>
+<p>Store the user in the database.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X POST \
+    "http://localhost/api/users" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"accusantium","lastname":"aut","date_of_birth":"2021-05-24T09:00:37+0000","types":"facere"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/users"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "accusantium",
+    "lastname": "aut",
+    "date_of_birth": "2021-05-24T09:00:37+0000",
+    "types": "facere"
+}
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-POSTapi-users" hidden>
+    <blockquote>Received response<span id="execution-response-status-POSTapi-users"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-users"></code></pre>
+</div>
+<div id="execution-error-POSTapi-users" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-users"></code></pre>
+</div>
+<form id="form-POSTapi-users" data-method="POST" data-path="api/users" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('POSTapi-users', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+    </h3>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>api/users</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="POSTapi-users" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>lastname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="lastname" data-endpoint="POSTapi-users" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>date_of_birth</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="date_of_birth" data-endpoint="POSTapi-users" data-component="body" required  hidden>
+<br>
+The value must be a valid date.
+</p>
+<p>
+<b><code>types</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="types" data-endpoint="POSTapi-users" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Get User</h2>
+<p>Retriew an user by ID.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/api/users/officia" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/users/officia"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<blockquote>
+<p>Example response (404):</p>
+</blockquote>
+<pre><code class="language-json">{
+    "message": "No query results for model [App\\User] officia",
+    "exception": "Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException",
+    "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "line": 224,
+    "trace": [
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "line": 200,
+            "function": "prepareException",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\app\\Exceptions\\Handler.php",
+            "line": 49,
+            "function": "render",
+            "class": "Illuminate\\Foundation\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "line": 68,
+            "function": "render",
+            "class": "App\\Exceptions\\Handler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "line": 51,
+            "function": "render",
+            "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 176,
+            "function": "handleException",
+            "class": "Illuminate\\Routing\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php",
+            "line": 59,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\ThrottleRequests",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 105,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 683,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 658,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 624,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 613,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 170,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 130,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "line": 52,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Fruitcake\\Cors\\HandleCors",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php",
+            "line": 63,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 171,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 105,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 145,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 110,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 324,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 305,
+            "function": "callLaravelOrLumenRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 76,
+            "function": "makeApiCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 51,
+            "function": "makeResponseCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 41,
+            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 236,
+            "function": "__invoke",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 172,
+            "function": "iterateThroughStrategies",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 127,
+            "function": "fetchResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 119,
+            "function": "processRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 73,
+            "function": "processRoutes",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 36,
+            "function": "handle",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "line": 37,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 93,
+            "function": "unwrapIfClosure",
+            "class": "Illuminate\\Container\\Util",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 37,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 590,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 134,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 121,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\symfony\\console\\Application.php",
+            "line": 1009,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\symfony\\console\\Application.php",
+            "line": 273,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\symfony\\console\\Application.php",
+            "line": 149,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 93,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 131,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "-&gt;"
+        },
+        {
+            "file": "C:\\laragon\\www\\laravel-esercitazione\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "-&gt;"
+        }
+    ]
+}</code></pre>
+<div id="execution-results-GETapi-users--user-" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETapi-users--user-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-users--user-"></code></pre>
+</div>
+<div id="execution-error-GETapi-users--user-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-users--user-"></code></pre>
+</div>
+<form id="form-GETapi-users--user-" data-method="GET" data-path="api/users/{user}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETapi-users--user-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>api/users/{user}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>user</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user" data-endpoint="GETapi-users--user-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+<h2>Put User</h2>
+<p>Update a user in the database by ID.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X PUT \
+    "http://localhost/api/users/voluptas" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"name":"quibusdam","lastname":"neque","date_of_birth":"2021-05-24T09:00:37+0000","types":"error"}'
+</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/users/voluptas"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "name": "quibusdam",
+    "lastname": "neque",
+    "date_of_birth": "2021-05-24T09:00:37+0000",
+    "types": "error"
+}
+
+fetch(url, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-PUTapi-users--user-" hidden>
+    <blockquote>Received response<span id="execution-response-status-PUTapi-users--user-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-PUTapi-users--user-"></code></pre>
+</div>
+<div id="execution-error-PUTapi-users--user-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PUTapi-users--user-"></code></pre>
+</div>
+<form id="form-PUTapi-users--user-" data-method="PUT" data-path="api/users/{user}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('PUTapi-users--user-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+    </h3>
+<p>
+<small class="badge badge-darkblue">PUT</small>
+ <b><code>api/users/{user}</code></b>
+</p>
+<p>
+<small class="badge badge-purple">PATCH</small>
+ <b><code>api/users/{user}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>user</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user" data-endpoint="PUTapi-users--user-" data-component="url" required  hidden>
+<br>
+
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>name</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="name" data-endpoint="PUTapi-users--user-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>lastname</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="lastname" data-endpoint="PUTapi-users--user-" data-component="body" required  hidden>
+<br>
+
+</p>
+<p>
+<b><code>date_of_birth</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="date_of_birth" data-endpoint="PUTapi-users--user-" data-component="body" required  hidden>
+<br>
+The value must be a valid date.
+</p>
+<p>
+<b><code>types</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="types" data-endpoint="PUTapi-users--user-" data-component="body" required  hidden>
+<br>
+
+</p>
+
+</form>
+<h2>Delete User</h2>
+<p>Delete a user by ID.</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X DELETE \
+    "http://localhost/api/users/vitae" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/api/users/vitae"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "DELETE",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<div id="execution-results-DELETEapi-users--user-" hidden>
+    <blockquote>Received response<span id="execution-response-status-DELETEapi-users--user-"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-DELETEapi-users--user-"></code></pre>
+</div>
+<div id="execution-error-DELETEapi-users--user-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-DELETEapi-users--user-"></code></pre>
+</div>
+<form id="form-DELETEapi-users--user-" data-method="DELETE" data-path="api/users/{user}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('DELETEapi-users--user-', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+    </h3>
+<p>
+<small class="badge badge-red">DELETE</small>
+ <b><code>api/users/{user}</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+<p>
+<b><code>user</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user" data-endpoint="DELETEapi-users--user-" data-component="url" required  hidden>
+<br>
+
+</p>
+</form>
+    </div>
+    <div class="dark-box">
+                    <div class="lang-selector">
+                                    <a href="#" data-language-name="bash">bash</a>
+                                    <a href="#" data-language-name="javascript">javascript</a>
+                            </div>
+            </div>
+</div>
+<script>
+    $(function () {
+        var languages = ["bash","javascript"];
+        setupLanguages(languages);
+    });
+</script>
+</body>
+</html>
