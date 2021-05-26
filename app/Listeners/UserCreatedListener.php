@@ -12,19 +12,13 @@ use Illuminate\Support\Facades\Mail;
 
 class UserCreatedListener implements ShouldQueue
 {
-    /**
-     * The name of the connection the job should be sent to.
-     *
-     * @var string|null
-     */
-
 
     /**
-     * The name of the queue the job should be sent to.
+     * The number of seconds to wait before retrying the job.
      *
-     * @var string|null
+     * @var int
      */
-
+    public $retryAfter = 3;
 
     /**
      * The time (seconds) before the job should be processed.
