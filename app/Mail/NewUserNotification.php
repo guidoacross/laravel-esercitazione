@@ -31,7 +31,7 @@ class NewUserNotification extends Mailable
         //return $this->from('example@example.com')->view('view.mail');
         return  $this->from('mail@example.com', 'Mailtrap')
                      ->subject('Mailtrap Confirmation')
-                     ->markdown('mails')
+                     ->markdown('email')
                      ->with([
                          'name' => 'New Mailtrap User',
                          'link' => '/inboxes/'

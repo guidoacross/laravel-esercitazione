@@ -15,6 +15,8 @@ use App\User;
 use App\Type;
 use Exception;
 use PhpParser\Node\Stmt\TryCatch;
+use App\Mail\NewUserNotification;
+use Illuminate\Support\Facades\Mail;
 
 /**
  * @group Users
@@ -65,7 +67,6 @@ class UserController extends Controller
                 $typeId = Type::select('id')->where('name',$type)->get();
                 $user->types()->attach($typeId);
             }
-            event(new UserCreated($user));
             return new UserResource($user);
         } catch (Exception $e) {
             return $e->getMessage();
