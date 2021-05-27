@@ -13,18 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
+Route::post('login', 'Api\Auth\LoginController@login');
 //user
 Route::apiResource('users','Api\UserController');
 //message
 Route::apiResource('messages', 'Api\MessageController');
 //type
 Route::apiResource('types', 'Api\TypeController');
-
-
 
 
 //page not found

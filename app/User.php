@@ -5,8 +5,9 @@ namespace App;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Database\Eloquent\Model;
 use App\Events\UserCreated;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Model
+class User extends Authenticatable implements JWTSubject
 {
     /**
      * ATTRIBUTES
@@ -16,8 +17,9 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'lastname', 'date_of_birth', 'age'
+        'name', 'lastname', 'date_of_birth', 'age', 'email', 'password'
     ];
+    
     public $timestamps = false;
 
     /**

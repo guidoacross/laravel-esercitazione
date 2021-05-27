@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\TypeResource;
@@ -59,7 +59,9 @@ class UserController extends Controller
             $request->validated();
             $user = User::create([
                 'name'          =>  $request->name,
-                'lastname'      =>  $request->lastname, 
+                'lastname'      =>  $request->lastname,
+                'email'         =>  $request->email,
+                'password'      =>  $request->password, 
                 'date_of_birth' =>  $request->date_of_birth,
                 'age'           =>  $this->calcAge($request->date_of_birth)
             ]);
@@ -109,6 +111,10 @@ class UserController extends Controller
     public function destroy(User $user) {
         $user->delete();
         return response(null, Response::HTTP_NO_CONTENT);
+    }
+
+    private function genPassword() {
+
     }
 
     private function calcAge($value) {
