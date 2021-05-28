@@ -13,6 +13,16 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::group([
+
+    'middleware' => 'api',
+    'prefix' => 'auth'
+
+], function ($router) {
+
+    Route::post('login', 'Api\Auth\LoginControlle@login');
+});
+
 Route::post('login', 'Api\Auth\LoginController@login');
 //user
 Route::apiResource('users','Api\UserController');

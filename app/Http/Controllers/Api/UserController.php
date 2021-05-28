@@ -14,9 +14,10 @@ use Illuminate\Http\Response;
 use App\User;
 use App\Type;
 use Exception;
-use PhpParser\Node\Stmt\TryCatch;
 use App\Mail\NewUserNotification;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
+use Tymon\JWTAuth\Exceptions\UserNotDefinedException;
 
 /**
  * @group Users
@@ -34,8 +35,10 @@ class UserController extends Controller
      */
 
     public function index() {
+        
         $users = User::with('types')->get();
-        return UserResource::collection($users);
+        return  UserResource::collection($users);
+
     }
 
     /**
@@ -45,6 +48,7 @@ class UserController extends Controller
      */
 
     public function show(User $user) {
+        $user = $this->authUser();
         return new UserResource($user) ;
     }
 
@@ -61,7 +65,7 @@ class UserController extends Controller
                 'name'          =>  $request->name,
                 'lastname'      =>  $request->lastname,
                 'email'         =>  $request->email,
-                'password'      =>  $request->password, 
+                'password'      =>  Hash::make($request->password), 
                 'date_of_birth' =>  $request->date_of_birth,
                 'age'           =>  $this->calcAge($request->date_of_birth)
             ]);

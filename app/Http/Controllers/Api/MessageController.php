@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Api\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use App\Http\Resources\MessageResource;
 use App\Http\Requests\StoreMessageRequest;
