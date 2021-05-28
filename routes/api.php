@@ -13,23 +13,22 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::group([
+//login
+Route::post('login', 'Api\Auth\LoginController@login');
+//user's create
+Route::post('users', 'Api\UserController@store');
 
-    'middleware' => 'api',
-    'prefix' => 'auth'
-
-], function ($router) {
-
-    Route::post('login', 'Api\Auth\LoginControlle@login');
+//protected routes
+Route::group(['middleware' => ['jwt.verify']], function () {
+    //user
+    Route::apiResource('users','Api\UserController', ['except'=> ['store']]);
+    //message
+    Route::apiResource('messages', 'Api\MessageController');
+    //type
+    Route::apiResource('types', 'Api\TypeController');
 });
 
-Route::post('login', 'Api\Auth\LoginController@login');
-//user
-Route::apiResource('users','Api\UserController');
-//message
-Route::apiResource('messages', 'Api\MessageController');
-//type
-Route::apiResource('types', 'Api\TypeController');
+
 
 
 //page not found

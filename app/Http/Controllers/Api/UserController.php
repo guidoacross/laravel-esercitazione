@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Api\Controller;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Resources\UserResource;
 use App\Http\Resources\TypeResource;
@@ -35,13 +35,8 @@ class UserController extends Controller
      */
 
     public function index() {
-        try {
-            auth()->userOrFail();
-            $users = User::with('types')->get();
-            return  UserResource::collection($users);
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 404);
-        }
+        $users = User::with('types')->get();
+        return  UserResource::collection($users);
     }
 
     /**
@@ -51,13 +46,7 @@ class UserController extends Controller
      */
 
     public function show(User $user) {
-        try {
-            auth()->userOrFail();
-            $user = $this->authUser();
-            return new UserResource($user) ;
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 404);
-        }
+        return new UserResource($user) ;
     }
 
     /**
@@ -94,9 +83,8 @@ class UserController extends Controller
      */
 
     public function update(User $user, StoreUserRequest $request) {
-        $request->validated();
         try {
-            auth()->userOrFail();
+            $request->validated();
             $user->update([
                 'name'          =>  $request->name,
                 'lastname'      =>  $request->lastname,
@@ -110,8 +98,6 @@ class UserController extends Controller
             }
             $user->types()->sync($idList);
             return new UserResource($user);
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 404);
         } catch (\Exception $e) {
             return $e->getMessage();
         }
@@ -124,13 +110,8 @@ class UserController extends Controller
      */
 
     public function destroy(User $user) {
-        try {
-            auth()->userOrFail();
-            $user->delete();
-            return response(null, Response::HTTP_NO_CONTENT);
-        } catch (UserNotDefinedException $e) {
-            return response()->json(['error' => $e->getMessage()], 404);
-        }
+        $user->delete();
+        return response(null, Response::HTTP_NO_CONTENT);
     }
 
     private function calcAge($value) {
