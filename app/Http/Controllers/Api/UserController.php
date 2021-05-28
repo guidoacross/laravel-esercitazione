@@ -35,10 +35,13 @@ class UserController extends Controller
      */
 
     public function index() {
-        
-        $users = User::with('types')->get();
-        return  UserResource::collection($users);
-
+        try {
+            auth()->userOrFail();
+            $users = User::with('types')->get();
+            return  UserResource::collection($users);
+        } catch (UserNotDefinedException $e) {
+            return response()->json(['error' => $e->getMessage()], 404);
+        }
     }
 
     /**
@@ -48,8 +51,13 @@ class UserController extends Controller
      */
 
     public function show(User $user) {
-        $user = $this->authUser();
-        return new UserResource($user) ;
+        try {
+            auth()->userOrFail();
+            $user = $this->authUser();
+            return new UserResource($user) ;
+        } catch (UserNotDefinedException $e) {
+            return response()->json(['error' => $e->getMessage()], 404);
+        }
     }
 
     /**
@@ -59,7 +67,7 @@ class UserController extends Controller
      */
 
     public function store(StoreUserRequest $request) {
-        try {     
+        try {
             $request->validated();
             $user = User::create([
                 'name'          =>  $request->name,
@@ -88,6 +96,7 @@ class UserController extends Controller
     public function update(User $user, StoreUserRequest $request) {
         $request->validated();
         try {
+            auth()->userOrFail();
             $user->update([
                 'name'          =>  $request->name,
                 'lastname'      =>  $request->lastname,
@@ -101,6 +110,8 @@ class UserController extends Controller
             }
             $user->types()->sync($idList);
             return new UserResource($user);
+        } catch (UserNotDefinedException $e) {
+            return response()->json(['error' => $e->getMessage()], 404);
         } catch (\Exception $e) {
             return $e->getMessage();
         }
@@ -113,12 +124,13 @@ class UserController extends Controller
      */
 
     public function destroy(User $user) {
-        $user->delete();
-        return response(null, Response::HTTP_NO_CONTENT);
-    }
-
-    private function genPassword() {
-
+        try {
+            auth()->userOrFail();
+            $user->delete();
+            return response(null, Response::HTTP_NO_CONTENT);
+        } catch (UserNotDefinedException $e) {
+            return response()->json(['error' => $e->getMessage()], 404);
+        }
     }
 
     private function calcAge($value) {
