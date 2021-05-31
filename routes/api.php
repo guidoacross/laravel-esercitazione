@@ -14,21 +14,23 @@ use Illuminate\Http\Request;
 */
 
 //login
-Route::post('login', 'Api\Auth\LoginController@login');
+Route::post('/login', 'Api\Auth\LoginController@login');
 //user's create
-Route::post('users', 'Api\UserController@store');
+Route::post('/users', 'Api\UserController@store');
 
 //protected routes
 Route::group(['middleware' => ['jwt.verify']], function () {
+    //refresh jwt token
+    Route::get('/refresh', 'Api\Auth\LoginController@refresh');
+    //search
+    Route::post('/search', 'Api\SearchController@filter');
     //user
-    Route::apiResource('users','Api\UserController', ['except'=> ['store']]);
+    Route::apiResource('/users','Api\UserController', ['except'=> ['store']]);
     //message
-    Route::apiResource('messages', 'Api\MessageController');
+    Route::apiResource('/messages', 'Api\MessageController');
     //type
-    Route::apiResource('types', 'Api\TypeController');
+    Route::apiResource('/types', 'Api\TypeController');
 });
-
-
 
 
 //page not found

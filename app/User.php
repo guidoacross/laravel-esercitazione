@@ -6,6 +6,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use App\Events\UserCreated;
+use App\Filters\FilterBuilder;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable implements JWTSubject
@@ -66,6 +67,16 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    /**
+     * SCOPES
+     */
+
+    public function scopeFilterBy($query, $filters) {
+        $namespace = 'App\Filters\UserFilters';
+        $filter = new FilterBuilder($query, $filters, $namespace);
+
+        return $filter->apply();
+    }
 
 
 }
