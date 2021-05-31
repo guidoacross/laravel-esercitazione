@@ -24,6 +24,16 @@ class StoreUserRequest extends BaseFormRequest
         return [
             'name' => 'required|string|alpha|max:45',
             'lastname' => 'required|string|alpha|max:45',
+            'email' => 'required|email|unique:users,email',
+            /*
+            The password contains characters from at least three of the following five categories:
+                English uppercase characters (A – Z)
+                English lowercase characters (a – z)
+                Base 10 digits (0 – 9)
+                Non-alphanumeric (For example: !, $, #, or %)
+                Unicode characters
+            */
+            'password' => 'required|min:5|regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\x])(?=.*[!$#%]).*$/', 
             'date_of_birth' => 'required|date_format:Y-m-d|before:-18 years',
             'types' => 'required|array',
             'types.*'  => [
