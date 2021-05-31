@@ -18,7 +18,7 @@ class UserCreatedListener implements ShouldQueue
      *
      * @var int
      */
-    public $retryAfter = 3;
+    public $retryAfter = 2;
 
     /**
      * The time (seconds) before the job should be processed.
