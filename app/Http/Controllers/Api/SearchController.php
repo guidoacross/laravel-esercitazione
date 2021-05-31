@@ -11,9 +11,10 @@ use Exception;
 class SearchController extends Controller
 {
     public function filter() {
-        
-        try{
 
+        try{
+            /*
+            // metodo when()
             $query = User::query();
             $query->when(request('email')== true , function ($q) {
                 return $q->where('email', request('email'));
@@ -27,6 +28,9 @@ class SearchController extends Controller
                 });
             });
             $users = $query->get();
+            */
+            // metodo OOP
+            $users = User::with('types')->filterBy(request()->all())->get();
             if ($users->isEmpty()) {
                 throw new Exception('',204);
             }

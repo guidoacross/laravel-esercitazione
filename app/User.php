@@ -71,6 +71,7 @@ class User extends Authenticatable implements JWTSubject
      * SCOPES
      */
 
+    // fist filter OOP structure
     public function scopeFilterBy($query, $filters) {
         $namespace = 'App\Filters\UserFilters';
         $filter = new FilterBuilder($query, $filters, $namespace);
