@@ -16,9 +16,10 @@ class FilterBuilder {
     public function apply() {
 
         foreach ($this->filters as $name => $value) {
+            //per ciascun filtro in request preleviamo la classe associata
             $normailizedName = ucfirst($name);
             $class = $this->namespace . "\\{$normailizedName}";
-
+            //
             if (!class_exists($class)) {
                 continue;
             }
